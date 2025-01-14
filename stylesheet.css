@@ -48,7 +48,6 @@ body {
   position: relative;
   width: 100%;
   justify-content: space-between;
-
   height: 100vh;
   background: url(background1.jpg) no-repeat;
   background-size: cover;
@@ -503,6 +502,9 @@ a:hover {
   display: block;
   transition: transform 0.5s;
 }
+section .about-img img{
+margin-top: 80px;
+}
 .layer {
   width: 100%;
   height: 0;
@@ -729,5 +731,105 @@ form textarea {
 @keyframes animationProgress {
   from {
     width: 0;
+  }
+} 
+/* Responsive Breakpoints */
+
+/* Mobile first - Default styles apply to mobile devices */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header .logo {
+      font-size: 1.8rem;
+  }
+
+  .navbar {
+      flex-direction: column;
+      margin-top: 1rem;
+  }
+
+  .home-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .home-content p {
+      font-size: 1.2rem;
+  }
+
+  .about {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .services-list {
+      flex-direction: column;
+  }
+
+  .skills .container1 {
+      flex-direction: column;
+  }
+
+  .portfolio-content .row {
+      flex-direction: column;
+  }
+
+  .contact {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-form {
+      width: 100%;
+  }
+
+  .contact-text {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+}
+
+/* Tablets and up */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-content h1 {
+      font-size: 2.8rem;
+  }
+
+  .about {
+      flex-direction: row;
+  }
+
+  .services-list {
+      flex-direction: row;
+  }
+
+  .portfolio-content .row {
+      flex-direction: column;
+  }
+
+  .contact {
+      flex-direction: column;
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 1025px) {
+  header {
+      justify-content: space-between;
+  }
+
+  .home-content h1 {
+      font-size: 3rem;
+  }
+
+  .services-list {
+      flex-direction: row;
+  }
+
+  .contact {
+      flex-direction: row;
+      justify-content: space-between;
   }
 }
